@@ -1,11 +1,11 @@
 # AI-Based Classroom Attendance System using Face Recognition
 
-## 📌 Aim
+## Aim
 The aim of this project is to develop a fully functional AI-based classroom attendance system that can automatically detect and recognize student faces from a classroom image or live camera feed. The system marks students as **Present or Absent**, stores attendance records in a database, and provides a teacher dashboard for managing and exporting attendance reports.
 
 ---
 
-## 📖 Project Description
+## Project Description
 This system uses **Face Recognition technology** to automate classroom attendance. It eliminates manual attendance marking and reduces time and errors. The system includes:
 
 - Student face registration
@@ -17,7 +17,7 @@ This system uses **Face Recognition technology** to automate classroom attendanc
 
 ---
 
-## 🧠 Technologies Used
+## Technologies Used
 - Python
 - OpenCV
 - Face Recognition Library (dlib / face_recognition)
@@ -28,7 +28,7 @@ This system uses **Face Recognition technology** to automate classroom attendanc
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 1. **Input Module** – Captures classroom image or video feed  
 2. **Face Detection Module** – Detects faces using OpenCV  
 3. **Face Recognition Module** – Matches faces with trained dataset  
@@ -38,7 +38,7 @@ This system uses **Face Recognition technology** to automate classroom attendanc
 
 ---
 
-## ⚙️ How the System Works
+##  How the System Works
 1. Register student faces into the system  
 2. Train the model with collected face data  
 3. Capture classroom image or start live camera  
