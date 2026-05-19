@@ -49,7 +49,8 @@ This system uses **Face Recognition technology** to automate classroom attendanc
 ---
 
 ## Program Output
-<img width="823" height="615" alt="image" src="https://github.com/user-attachments/assets/c735ad53-a7d6-4517-a984-76e5d9f36fa4" />
+<img width="629" height="511" alt="image" src="https://github.com/user-attachments/assets/b61ebbb7-02d8-499a-8f89-cf79f31ddc6d" />
+
 <img width="835" height="614" alt="image" src="https://github.com/user-attachments/assets/f8cff9cf-6f64-49dd-ae0c-e181a9ed1738" />
 
 <img width="486" height="108" alt="image" src="https://github.com/user-attachments/assets/da057cce-45ba-4a7e-ba6e-592d2554950d" />
