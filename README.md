@@ -1,62 +1,58 @@
-# Coin-Detection-using-OpenCV-in-Python
-## AIM : 
-To detect and visualize the edges and contours of a coin using image processing techniques such as grayscale conversion, blurring, morphological operations, and Canny edge detection in OpenCV.
-## PROGRAM:
-### NAME : DEEPIKA R
-### REGISTER NUMBER : 212223230038
-```
+# AI-Based Classroom Attendance System using Face Recognition
 
-import cv2
-import numpy as np
-import matplotlib.pyplot as plt
+## 📌 Aim
+The aim of this project is to develop a fully functional AI-based classroom attendance system that can automatically detect and recognize student faces from a classroom image or live camera feed. The system marks students as **Present or Absent**, stores attendance records in a database, and provides a teacher dashboard for managing and exporting attendance reports.
 
-def preprocess_image(image):
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    blurred = cv2.GaussianBlur(gray, (5, 5), 0)
-    return blurred
+---
 
-def detect_fractures(preprocessed, original):
-    kernel = np.ones((5, 5), np.uint8)
-    erosion = cv2.erode(preprocessed, kernel, iterations=1)
-    dilation = cv2.dilate(erosion, kernel, iterations=1)
-    edges = cv2.Canny(dilation, 50, 150)
-    contours, _ = cv2.findContours(edges.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    result = original.copy()
-    cv2.drawContours(result, contours, -1, (0, 255, 0), 2)
-    return result
+## 📖 Project Description
+This system uses **Face Recognition technology** to automate classroom attendance. It eliminates manual attendance marking and reduces time and errors. The system includes:
 
-def present_results(original_image, processed_image):
-    # Convert from BGR (OpenCV) to RGB (Matplotlib)
-    original_rgb = cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB)
-    processed_rgb = cv2.cvtColor(processed_image, cv2.COLOR_BGR2RGB)
+- Student face registration
+- Face detection and recognition
+- Automatic attendance marking
+- Database storage of attendance records
+- Teacher dashboard for viewing and editing attendance
+- Export attendance report as CSV file
 
-    # Display using matplotlib
-    plt.figure(figsize=(12, 6))
-    plt.subplot(1, 2, 1)
-    plt.title("Original Image")
-    plt.imshow(original_rgb)
-    plt.axis('off')
+---
 
-    plt.subplot(1, 2, 2)
-    plt.title("Fracture Detected Image")
-    plt.imshow(processed_rgb)
-    plt.axis('off')
+## 🧠 Technologies Used
+- Python
+- OpenCV
+- Face Recognition Library (dlib / face_recognition)
+- NumPy
+- Pandas
+- SQLite / MySQL (Database)
+- Flask (for dashboard - optional)
 
-    plt.show()
+---
 
-# --- Main Execution ---
-image_path = 'CoinsA.png'
-image = cv2.imread(image_path)
+## 🏗️ System Architecture
+1. **Input Module** – Captures classroom image or video feed  
+2. **Face Detection Module** – Detects faces using OpenCV  
+3. **Face Recognition Module** – Matches faces with trained dataset  
+4. **Attendance Module** – Marks present/absent students  
+5. **Database Module** – Stores attendance records  
+6. **Dashboard Module** – Displays and manages attendance  
 
-if image is None:
-    print("Error: Image not found. Check the file path.")
-else:
-    preprocessed = preprocess_image(image)
-    fracture_detected_image = detect_fractures(preprocessed, image)
-    present_results(image, fracture_detected_image)
-```
-## OUTPUT:
-<img width="1172" height="573" alt="image" src="https://github.com/user-attachments/assets/44b355b4-1e9a-4bd2-be67-bbd550b22404" />
+---
 
-## RESULT :
-Thus the program to detect the edges was executed successfully.
+## ⚙️ How the System Works
+1. Register student faces into the system  
+2. Train the model with collected face data  
+3. Capture classroom image or start live camera  
+4. System detects and recognizes faces  
+5. Attendance is automatically marked  
+6. Data is stored in database and shown on dashboard  
+
+---
+
+## Program Output
+<img width="823" height="615" alt="image" src="https://github.com/user-attachments/assets/c735ad53-a7d6-4517-a984-76e5d9f36fa4" />
+<img width="835" height="614" alt="image" src="https://github.com/user-attachments/assets/f8cff9cf-6f64-49dd-ae0c-e181a9ed1738" />
+
+<img width="486" height="108" alt="image" src="https://github.com/user-attachments/assets/da057cce-45ba-4a7e-ba6e-592d2554950d" />
+
+### Result
+The AI-based classroom attendance system was successfully developed and tested. The system accurately detects and recognizes student faces from both images and live camera feeds and automatically marks attendance as Present or Absent.
